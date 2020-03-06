@@ -1,54 +1,58 @@
 using System;
 
-namespace FizzBuzzKata
+public class Program
 {
-	public class FizzBuzzController
+	public static void Main()
 	{
-		public static void Main(string[] args)
+		Console.WriteLine("Enter Number");
+		int number = Convert.ToInt32(Console.ReadLine());
+		
+		string result = FizzBuzzPop(number);
+		Console.WriteLine(result);
+	}
+
+	public static string FizzBuzzPop(int number)
+	{
+		string result = "";
+		if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0)
 		{
-			Console.WriteLine("Enter Number:");
-			int number = Convert.ToInt32(Console.ReadLine());
-			
-			if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0)
-			{
-				Console.WriteLine("Fizz Buzz Pop");
-				return;
-			}
-			if (number % 3 == 0 && number % 5 == 0)
-			{
-				Console.WriteLine("Fizz Buzz");
-				return;
-			}
-			else if (number % 7 == 0 && number % 3 == 0)
-			{
-				Console.WriteLine("Fizz Pop");
-				return;
-			}
-			else if (number % 5 == 0 && number % 7 == 0)
-			{
-				Console.WriteLine("Buzz Pop");
-				return;
-			}
-			else if (number % 3 == 0)
-			{
-				Console.WriteLine("Fizz");
-				return;
-			}
-			else if (number % 5 == 0)
-			{
-				Console.WriteLine("Buzz");
-				return;
-			}
-			else if (number % 7 == 0)
-			{
-				Console.WriteLine("Pop");
-				return;
-			}
-			else
-			{
-				Console.WriteLine(number);
-				return;
-			}
+			result = "Fizz Buzz Pop";
+			return result;
+		}
+		if (number % 3 == 0 && number % 5 == 0)
+		{
+			result = "Fizz Buzz";
+			return result ;
+		}
+		else if (number % 7 == 0 && number % 3 == 0)
+		{
+			result = "Fizz Pop";
+			return result;
+		}
+		else if (number % 5 == 0 && number % 7 == 0)
+		{
+			result = "Buzz Pop";
+			return result;
+		}
+		else if (number % 3 == 0)
+		{
+			result = "Fizz";
+			return result;
+		}
+		else if (number % 5 == 0)
+		{
+			result = "Buzz";
+			return result;
+		}
+		else if (number % 7 == 0)
+		{
+			result = "Pop";
+			return result;
+		}
+		else
+		{
+			result = number.ToString();
+			return result;
 		}
 	}
 }
