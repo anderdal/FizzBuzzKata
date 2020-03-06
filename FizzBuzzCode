@@ -2,7 +2,7 @@ using System;
 
 namespace FizzBuzzKata
 {
-	public class FizzBuzzCode
+	public class FizzBuzzController
 	{
 		public static void Main(string[] args)
 		{
