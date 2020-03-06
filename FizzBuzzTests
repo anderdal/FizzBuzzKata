@@ -1,0 +1,117 @@
+using FizzBuzzController
+
+[TestClass]
+public class FizzBuzzCodeTest
+{
+  [TestMethod]
+  public void FizzBuzzPopTest()
+  {
+    //Arrange
+    FizzBuzzController controller = new FizzBuzzController();
+    int number = 105;
+    
+    //Act
+    var result = controller.FizzBuzzPop(number);
+    
+    //Assert
+    Assert.IsTrue(result, "Fizz Buzz Pop");
+  }
+  
+  [TestMethod]
+  public void FizzBuzzTest()
+  {
+    //Arrange
+    FizzBuzzController controller = new FizzBuzzController();
+    int number = 15;
+    
+    //Act
+    var result = controller.FizzBuzzPop();
+    
+    //Assert
+    Assert.IsTrue(result, "Fizz Buzz");
+  }
+  
+  [TestMethod]
+  public void FizzPopTest()
+  {
+    //Arrange
+    FizzBuzzController controller = new FizzBuzzController();
+    int number = 21;
+    
+    //Act
+    var result = controller.FizzBuzzPop(number);
+    
+    //Assert
+    Assert.IsTrue(result, "Fizz Pop");
+  }
+  
+  [TestMethod]
+  public void BuzzPopTest()
+  {
+    //Arrange 
+    FizzBuzzController controller = new FizzBuzzController();
+    int number = 35;
+    
+    //Act
+    var result = controller.FizzBuzzPop(number);
+    
+    //Assert
+    Assert.IsTrue(result, "Buzz Pop");
+  }
+
+  [TestMethod]
+  public void FizzTest()
+  {
+    //Arrange
+    FizzBuzzController controller = new FizzBuzzController();
+    int number = 3;
+    
+    //Act
+    var result = controller.FizzBuzzPop(number);
+    
+    //Assert
+    Assert.IsTrue(result, "Fizz");
+  }
+  
+  [TestMethod]
+  public void BuzzTest()
+  {
+    //Arrange
+    FizzBuzzController controller = new FizzBuzzController();
+    int number = 5;
+    
+    //Act
+    var result = controller.FizzBuzzPop(number);
+    
+    //Assert
+    Assert.IsTrue(result, "Buzz");
+  }
+  
+  [TestMethod]
+  public void PopTest()
+  {
+    //Arrange
+    FizzBuzzController controller = new FizzBuzzController();
+    int number = 7;
+    
+    //Act
+    var result = controller.FizzBuzzPop(number);
+    
+    //Assert
+    Assert.IsTrue(result, "Pop");
+  }
+  
+  [TestMethod]
+  public void NotFizzBuzzPopTest()
+  {
+    //Arrange
+    FizzBuzzController controller = new FizzBuzzController();
+    int number = 2;
+    
+    //Act
+    var result = controller.FizzBuzzPop(number);
+    
+    //Assert
+    Assert.IsTrue(result, 2);
+  }
+}
