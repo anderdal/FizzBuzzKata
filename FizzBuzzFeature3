@@ -1,0 +1,61 @@
+using System;
+
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		while (true)
+		{
+			Console.WriteLine("Enter first label: ");
+			string firstLabel = Console.ReadLine();
+
+			Console.WriteLine("Enter first mutiple: ");
+			int firstMult = Convert.ToInt32(Console.ReadLine());
+
+			Console.WriteLine("Enter second label: ");
+			string secondLabel = Console.ReadLine();
+
+			Console.WriteLine("Enter second multiple: ");
+			int secondMult = Convert.ToInt32(Console.ReadLine());
+
+			Console.WriteLine("Enter a Number: ");
+			int number = Convert.ToInt32(Console.ReadLine());
+
+			var first = new FizzBuzz(firstLabel, firstMult);
+			var second = new FizzBuzz(secondLabel, secondMult);
+
+			FizzBuzzPop(first, second, number);
+		}
+	}
+
+	public class FizzBuzz
+	{
+		public FizzBuzz(string label, int multiple)
+		{
+			Label = label;
+			Multiple = multiple;
+		}
+		public string Label { get; set; }
+		public int Multiple { get; set; }
+	}
+
+	public static void FizzBuzzPop(FizzBuzz first, FizzBuzz second, int number)
+	{
+		if (number % first.Multiple == 0 && number % second.Multiple == 0)
+		{
+			Console.WriteLine(first.Label + second.Label);
+		}
+		else if (number % first.Multiple == 0)
+		{
+			Console.WriteLine(first.Label);
+		}
+		else if (number % second.Multiple == 0)
+		{
+			Console.WriteLine(second.Label);
+		}
+		else
+		{
+			Console.WriteLine(number);
+		}
+	}
+}
