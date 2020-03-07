@@ -1,0 +1,87 @@
+using FizzBuzzPopFeature3Controller
+using FizzBuzzClass
+
+[TestClass]
+public class FizzBuzzPopFeature3Tests
+{
+  [TestMethod]
+  public void FuzzyBuzzyTest()
+  {
+    //Arrange
+    FizzBuzzPopFeature3Controller controller = new FizzBuzzPopFeature3Controller();
+    var first = FizzBuzz();
+    first.Label = "Fuzzy";
+    first.Multple = 2;
+    
+    var second = FizzBuzz();
+    second.Label = "Buzzy"
+    second.Multiple = 3;
+    int number = 6
+    
+    //Act
+    var result = controller.FizzBuzzPop(first, second, number);
+    
+    //Assert
+    Assert.IsTrue(result, "Fuzzy Buzzy");
+  }
+  [TestMethod]
+  public void FuzzyTest()
+  {
+    //Arrange
+    FizzBuzzPopFeature3Controller controller = new FizzBuzzPopFeature3Controller();
+    var first = FizzBuzz();
+    first.Label = "Fuzzy";
+    first.Multple = 2;
+    
+    var second = FizzBuzz();
+    second.Label = "Buzzy"
+    second.Multiple = 3;
+    int number = 2;
+    
+    //Act
+    var result = controller.FizzBuzzPop(first, second, number);
+    
+    //Assert
+    Assert.IsTrue(result, "Fuzzy");
+  }
+  [TestMethod]
+  public void BuzzyTest()
+  {
+    //Arrange
+    FizzBuzzPopFeature3Controller controller = new FizzBuzzPopFeature3Controller();
+    var first = FizzBuzz();
+    first.Label = "Fuzzy";
+    first.Multple = 2;
+    
+    var second = FizzBuzz();
+    second.Label = "Buzzy"
+    second.Multiple = 3;
+    int number = 3
+    
+    //Act
+    var result = controller.FizzBuzzPop(first, second, number);
+    
+    //Assert
+    Assert.IsTrue(result, "Buzzy");
+  }
+  [TestMethod]
+  public void FuzzyBuzzyTest()
+  {
+    //Arrange
+    FizzBuzzPopFeature3Controller controller = new FizzBuzzPopFeature3Controller();
+    var first = FizzBuzz();
+    first.Label = "Fuzzy";
+    first.Multple = 2;
+    
+    var second = FizzBuzz();
+    second.Label = "Buzzy"
+    second.Multiple = 3;
+    int number = 5
+    
+    //Act
+    var result = controller.FizzBuzzPop(first, second, number);
+    
+    //Assert
+    Assert.IsTrue(result, "5");
+  }
+}
